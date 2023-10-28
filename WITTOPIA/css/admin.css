@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700');
+
+/* Define color variables */
+:root {
+  --orange: #fb6c3c;
+  --red: #cc5433;
+  --white: #FFFFFF;
+  --black: #3c3c44;
+  --light-bg: #F0F0F0;
+}
+
+/* Apply styles to the header elements */
+body{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto';
+  font-weight: 800;
+  background: var(--light-bg);
+}
+
+ul{
+    background-color: var(--orange);
+    width: 16%;
+    height: 100%;
+    position: fixed;
+    padding-top: 5%;
+    text-align: center;
+}
+
+ul li{
+    list-style: none;
+    padding-bottom: 30px;
+    font-size: 1.5rem;
+}
+
+ul li a{
+    color: var(--white);
+    font-style: bold;
+    text-decoration: none;
+    padding-right: 2rem;
+}
+ul li a:hover{
+    color: var(--black);
+    text-decoration: none;
+}
+
+.content{
+    margin-left: 20%;
+    margin-top: 5%;
+    font-style: bold;
+}
+
+.content .dashboard .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 1.5rem;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .content .dashboard .box-container .box{
+    border-radius: .5rem;
+    background-color: var(--white);
+    padding: 1.5rem;
+    text-align: center;
+    
+  }
+
+  .content .dashboard .box-container .box h3{
+    font-size: 2.5rem;
+    color: var(--black);
+    margin-bottom: .5rem;
+  }
+
+  .content .dashboard .box-container .box p{
+    margin: .5rem 0;
+    border-radius: .5rem;
+    padding: 1rem 1.5rem;
+    background-color: var(--light-bg);
+    font-size: 1.5rem;
+    color: var(--red);
+  }
+
+  @media (max-width: 768px) {
+    ul {
+      width: 100%;
+      position: static;
+    }
+  }
+  
+  ul li {
+    list-style: none;
+    padding-bottom: 30px;
+    font-size: 1.5rem;
+  }
+  
+  ul li a {
+    color: var(--white);
+    font-style: bold;
+    text-decoration: none;
+    padding-right: 2rem;
+  }
+  
+  ul li a:hover {
+    color: var(--black);
+    text-decoration: none;
+  }
+  
+  .content {
+    margin-left: 20%;
+    margin-top: 5%;
+    font-style: bold;
+  }
+  
+  @media (max-width: 1024px) {
+    /* Tablet styles */
+  
+    ul {
+      width: 25%;
+    }
+  
+    .content {
+      margin-left: 10%;
+    }
+  
+    .box-container {
+      grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+    }
+  }
+  
+  @media (max-width: 768px) {
+    /* Mobile styles */
+  
+    ul {
+      width: 100%;
+      position: static;
+    }
+  
+    .content {
+      margin-left: 0;
+    }
+  
+    .box-container {
+      grid-template-columns: 1fr;
+    }
+  }
